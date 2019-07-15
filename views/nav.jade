@@ -1,0 +1,5 @@
+mixin nav
+  ul
+    - for (let page of pages)
+      li
+        a(href = page.path) #{page.title}
