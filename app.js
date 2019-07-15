@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const pages = require("./routes/pages");
 
 const staticPageRouter = require("./routes/static");
 
@@ -33,7 +34,12 @@ app.use((err, req, res, next) => {
 
   // render the error page
   res.status(err.status || 500);
-  res.render("error");
+  res.render("error", {
+    pages,
+    page: {
+      title: "Whoops!"
+    }
+  });
 });
 
 module.exports = app;

@@ -1,20 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const pages = [
-  {
-    path: "home",
-    title: "Home"
-  },
-  {
-    path: "experience",
-    title: "Experience"
-  },
-  {
-    path: "skills",
-    title: "Skills"
-  }
-];
+const pages = require("./pages");
 
 router.get("*", (req, res, next) => {
   const path = req.path.substring(1) || "home";
