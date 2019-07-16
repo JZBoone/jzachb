@@ -4,8 +4,8 @@ module.exports = [
     title: "Home"
   },
   {
-    path: "experience",
-    title: "Experience"
+    path: "about",
+    title: "About"
   },
   {
     path: "skills",
