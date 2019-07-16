@@ -1,8 +1,29 @@
-body {
-  padding: 50px;
+body,
+html {
+  margin: 0px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+nav {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+nav a {
+  background-color: #00b7ff;
+  font-size: 18px;
+  padding: 15px 0px;
+  color: #000000;
+  flex-grow: 1;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: white;
+}
+
+#staticRoot {
+  padding: 15px;
 }

@@ -1,6 +1,6 @@
 module.exports = [
   {
-    path: "home",
+    path: "",
     title: "Home"
   },
   {
@@ -10,5 +10,9 @@ module.exports = [
   {
     path: "skills",
     title: "Skills"
+  },
+  {
+    path: "demos",
+    title: "Demos"
   }
 ];
