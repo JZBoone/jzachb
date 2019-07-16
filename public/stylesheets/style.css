@@ -3,6 +3,7 @@ html {
   margin: 0px;
   padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
 }
 
 nav {
@@ -31,6 +32,7 @@ nav a.active {
   position: relative;
   top: 51px;
   padding: 15px;
+  height: 100%;
   max-height: calc(100vh - 51px);
   overflow: auto;
 }
