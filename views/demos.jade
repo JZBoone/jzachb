@@ -4,5 +4,6 @@ block content
   h1= page.title
   - for (let d of demos)
       a(
-        href = `demos/${d.path}`,
+        href = `/demos/blurbs/${d.path}`,
       ) #{d.title}
+      span &nbsp;- #{d.description}
