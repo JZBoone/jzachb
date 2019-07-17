@@ -13,6 +13,7 @@ module.exports = [
   },
   {
     path: "demos",
-    title: "Demos"
+    title: "Demos",
+    demoUrl: "https://storage.googleapis.com/jzachb-demos/quick-sort/index.html"
   }
 ];

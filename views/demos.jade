@@ -1,10 +1,4 @@
 extends layout
 
 block content
-  iframe(
-    width='100%',
-    height='100%',
-    style="border:none;"
-    src='https://storage.googleapis.com/jzachb-demos/quick-sort/index.html',
-
-  )
+  iframe.demo(src=page.demoUrl)

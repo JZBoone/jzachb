@@ -7,5 +7,9 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     include nav.jade
-    #content
-      block content
+    if page.demoUrl
+      #demo
+        block content
+    else
+      #content
+        block content
