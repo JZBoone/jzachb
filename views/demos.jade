@@ -1,4 +1,8 @@
 extends layout
 
 block content
-  iframe.demo(src=page.demoUrl)
+  h1= page.title
+  - for (let d of demos)
+      a(
+        href = `demos/${d.path}`,
+      ) #{d.title}

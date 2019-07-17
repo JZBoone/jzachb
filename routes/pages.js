@@ -1,19 +1,22 @@
 module.exports = [
   {
-    path: "",
+    path: "/",
+    template: "home",
     title: "Home"
   },
   {
-    path: "about",
+    path: "/about",
+    template: "about",
     title: "About"
   },
   {
-    path: "skills",
+    path: "/skills",
+    template: "skills",
     title: "Skills"
   },
   {
-    path: "demos",
-    title: "Demos",
-    demoUrl: "https://storage.googleapis.com/jzachb-demos/quick-sort/index.html"
+    path: "/demos",
+    template: "demos",
+    title: "Demos"
   }
 ];
