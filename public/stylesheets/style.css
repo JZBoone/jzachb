@@ -33,7 +33,7 @@ nav a.active {
   position: relative;
   top: 51px;
   height: 100%;
-  max-height: calc(100vh - 51px);
+  max-height: calc(100vh - 66px);
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
