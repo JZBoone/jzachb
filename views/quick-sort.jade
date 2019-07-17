@@ -1,6 +1,19 @@
 extends layout
 
 block content
-  h1 Quick Sort
-  p This is a React application that helps you visualize and understand the quick sort algorithm.
-  a(href=`/demos/run/${page.path}`) Go to Demo
+  h2 Summary
+  p Visualize and understand the quick sort algorithm
+  h2 Technologies
+  p React, React hooks, create-react-app
+  h2 Inspiration
+  p I learned the quick sort algorithm at one point but couldn't quite remember it. After a quick Google search, I came across across a 
+    a(href='https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/visualize/', target='_blank')
+      | quick sort visualization tool
+    | . Very cool!
+  h2 Discussion
+  p Quick sort's strength is that it works with just the array that it is given. Initially I tried to stay true to the spirit of the algorithm by using a single array. I knew that I would have to run the entire algorithm upfront in order to show the user the total number of steps. My idea was to use the dispatch-reducer pattern and generate a list of actions that would mutate one array as the user clicked through the steps. With this initial implementation, I generated a stack of dispatch actions that could mutate the array, update the pointers, and change the display text. This worked pretty well going forward, but not in reverse. Ultimately, I abandoned this approach in favor of the more React-way of doing things. My final implementation is pretty straightforward. When the algorithm runs, it generates a stack of UI states. The array of numbers is copied by way of the spread operator each time a new state is generated and added to the stack. In the end, I reminded myself that I was building a user interfacer rather than a low level data processing algorithm.
+  br
+  a(href=`/demos/run/${page.path}`) View Demo
+  br
+  br
+  a(href='https://github.com/JZBoone/quick-sort', target="_blank") View Source Code
