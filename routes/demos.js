@@ -1,5 +1,11 @@
 module.exports = [
   {
+    path: "jzachb",
+    title: "jzachb",
+    description:
+      "this site is a Node.js Express application that runs on Google Cloud Platform"
+  },
+  {
     path: "quick-sort",
     title: "Quick Sort",
     description:
