@@ -6,17 +6,22 @@ html {
   height: 100%;
 }
 
+#nav-wrapper {
+  background-color: #00b7ff;
+  width: 100%;
+  position: fixed;
+}
+
 nav {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   text-align: center;
-  position: fixed;
-  width: 100%;
   z-index: 1;
 }
 
 nav a {
-  background-color: #00b7ff;
   font-size: 18px;
   padding: 15px 0px;
   color: #000000;

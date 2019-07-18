@@ -1,6 +1,7 @@
-nav
-  - for (let p of pages)
-      a(
-        href = p.path,
-        class = p.path === page.path ? 'active' : ''
-      ) #{p.title}
+#nav-wrapper
+  nav
+    - for (let p of pages)
+        a(
+          href = p.path,
+          class = p.path === page.path ? 'active' : ''
+        ) #{p.title}
