@@ -2,7 +2,7 @@ body,
 html {
   margin: 0px;
   padding: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
   height: 100%;
 }
 
@@ -28,7 +28,7 @@ nav a.active {
   color: white;
 }
 
-#content,
+#wrapper,
 #demo {
   position: relative;
   top: 51px;
@@ -38,8 +38,13 @@ nav a.active {
   -webkit-overflow-scrolling: touch;
 }
 
-#content {
+#wrapper {
   padding: 15px 15px 0px 15px;
+}
+
+#content {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 #demo iframe {
