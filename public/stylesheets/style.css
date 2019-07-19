@@ -43,13 +43,10 @@ nav a.active {
   -webkit-overflow-scrolling: touch;
 }
 
-#wrapper {
-  padding: 15px 15px 0px 15px;
-}
-
 #content {
   max-width: 960px;
   margin: 0 auto;
+  padding: 20px 0px 150px 0px;
 }
 
 #demo iframe {
