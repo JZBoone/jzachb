@@ -36,10 +36,7 @@ nav a.active {
 
 #wrapper,
 #demo {
-  margin-top: 48px;
-  height: 100%;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
+  padding-top: 75px;
 }
 
 @media only screen and (max-width: 600px) {
