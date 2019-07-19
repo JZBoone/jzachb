@@ -1,7 +1,7 @@
 module.exports = [
   {
     path: "jzachb",
-    title: "jzachb",
+    title: "This Site",
     description:
       "The site you are viewing is a Node.js app that runs on Google Cloud Platform."
   },
