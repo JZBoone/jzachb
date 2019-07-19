@@ -43,6 +43,18 @@ nav a.active {
   -webkit-overflow-scrolling: touch;
 }
 
+@media only screen and (max-width: 600px) {
+  #wrapper,
+  #demo {
+    bottom: 51px;
+    top: unset;
+    padding-top: 15px;
+  }
+  #nav-wrapper {
+    bottom: 0px;
+  }
+}
+
 #content {
   max-width: 960px;
   margin: 0 auto;
