@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= page.title
-  p Each link takes you to a page that lists the technologies used, the inspiration behind the demo, and a brief explanation of my thought process.
+  p Each link takes you to a page that lists the technologies used, the inspiration behind the demo, and a brief explanation of my thought process. You will also find links to the source code for each demo.
   - for (let d of demos)
       a(
         href = `/demos/blurbs/${d.path}`,

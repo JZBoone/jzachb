@@ -4,10 +4,35 @@ block content
   h1= page.title
   p= page.description
   h2 Technologies
-  p Node.js, Express, Jade, Google Cloud Platform
+  p Node.js, Express, Jade, App Engine, Cloud Storage
   h2 Inspiration
-  p I am pretty obsessed with seeing my code work in production. After I made the quick sort visualizer, I wanted to publish it somewhere. I finally decided to set up a playground where I could publish the stuff I build!
+  p I am obsessed with seeing my code work in production. After I made the quick sort visualizer, I wanted to publish it somewhere.
   h2 Discussion
-  p In deciding how to set up my site, my requirements were pretty simple: (1) use technologies that I enjoy and (2) create a home for my demos. I decided to host everything on Google Cloud Platform, and so far, I'm really happy with that choice.  I followed the Node.js quick start tutorial, and getting my application live was pretty much as simple as running the "gcloud app deploy" command.
+  p In determining the architecture and technologies to build this site, my goal was for the site to be: 
+  ol
+    li A home to various demo applications whose source code would live in individual github repositories
+    li Served over SSL
+    li Responsive
+    li SEO friendly
+    li Performant
+    li Flexible
+    li Maintainable
+    li Fun to work with
+    li An expression of me
+  p The hello world version of this site that I first pushed was a boilerplate node app created with the 
+    a(href='https://www.npmjs.com/package/express-generator' target='_blank') express-generator
+    | &nbsp;tool. After following the 
+    a(href='https://cloud.google.com/nodejs/getting-started/hello-world' target='_blank') node.js quick start tutorial
+    | &nbsp;for Google Cloud Platform and running
+    code.command.inline gcloud app deploy
+    | I had already met a lot of my requirements.
+  p To host my first demo (the quick sort React app) I created a storage bucket and a simple deploy script to push the build into a subdirectory in the bucket:
+  code.command npm run build
+  br
+  code.command gsutil -m rm -r gs://jzachb-demos/quick-sort
+  br
+  code.command gsutil -m -h "Cache-Control:no-cache" rsync -r ./build  gs://jzachb-demos/quick-sort/
+  p Then in my node app I loaded the demo app inside an iframe. After a few CSS tweaks, I had an MVP (minimum viable product) that hit all of my requirements.
+  p A quick note on the visual design (or lack thereof) of this site. I am not a visual designer. I wanted everything in this site to be an expression of me and my work, the meat and potatoes of which are the content and the code. If you inspect the code, you'll notice that it is extremely simple. In fact, my whole approach to problem solving is to find the simplest possible solution that meets all of the requirements. It is worth mentioning, however, that the code is written in such a way that with the help of a designer it would take very little effort to transform the look and feel.
   br
   a(href='https://github.com/JZBoone/jzachb', target='_blank') View Source Code
