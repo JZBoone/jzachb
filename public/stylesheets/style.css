@@ -10,6 +10,7 @@ html {
   background-color: #00b7ff;
   width: 100%;
   position: fixed;
+  top: 0px;
   z-index: 1;
 }
 
@@ -23,7 +24,7 @@ nav {
 
 nav a {
   font-size: 20px;
-  padding: 12px 0px;
+  padding: 8px 0px;
   color: #000000;
   flex-grow: 1;
   text-decoration: none;
@@ -49,6 +50,11 @@ nav a.active {
   }
   #nav-wrapper {
     bottom: 0px;
+    top: unset;
+  }
+  nav a {
+    font-size: 18px;
+    padding: 8px 0px;
   }
 }
 
