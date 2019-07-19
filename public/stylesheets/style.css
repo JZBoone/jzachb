@@ -2,7 +2,7 @@ body,
 html {
   margin: 0px;
   padding: 0px;
-  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 18px "Hind Siliguri", Helvetica, Arial, sans-serif;
   height: 100%;
 }
 
@@ -10,6 +10,7 @@ html {
   background-color: #00b7ff;
   width: 100%;
   position: fixed;
+  z-index: 1;
 }
 
 nav {
@@ -18,12 +19,11 @@ nav {
   display: flex;
   flex-direction: row;
   text-align: center;
-  z-index: 1;
 }
 
 nav a {
-  font-size: 18px;
-  padding: 15px 0px;
+  font-size: 20px;
+  padding: 12px 0px;
   color: #000000;
   flex-grow: 1;
   text-decoration: none;
