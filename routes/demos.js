@@ -1,6 +1,6 @@
 module.exports = [
   {
-    path: "jzachb",
+    path: "this-site",
     title: "This Site",
     description:
       "The site you are viewing is a Node.js app that runs on Google Cloud Platform."
