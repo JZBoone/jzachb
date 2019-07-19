@@ -6,13 +6,37 @@ block content
   h2 Technologies
   p React
   h2 Inspiration
-  p I learned the quick sort algorithm at one point but couldn't quite remember it. After a quick Google search, I came across across a 
+  p I learned the quick sort algorithm at one point but couldn't quite remember it. After a quick Google search, I came across a 
     a(href='https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/visualize/', target='_blank')
       | quick sort visualization tool
     | . Very cool!
   h2 Discussion
-  p Quick sort's strength is that it works with just the array that it is given. Initially I tried to stay true to the spirit of the algorithm by using a single array. I knew that I would have to run the entire algorithm upfront in order to show the user the total number of steps. My idea was to use the dispatch-reducer pattern and generate a list of actions that would mutate one array as the user clicked through the steps. With this initial implementation, I generated a stack of dispatch actions that could mutate the array, update the pointers, and change the display text. This worked pretty well going forward, but not in reverse. Ultimately, I abandoned this approach in favor of the more React-way of doing things. My final implementation is pretty straightforward. When the algorithm runs, it generates a stack of UI states. The array of numbers is copied by way of the spread operator each time a new state is generated and added to the stack. In the end, I reminded myself that I was building a user interfacer rather than a low level data processing algorithm.
-  br
+  p Quick sort's strength is that it works with just the array that it is given. Initially I tried to stay true to the spirit of the algorithm by using a single array. I knew that I would have to run the entire algorithm upfront in order to show the user the total number of steps. My idea was to use the dispatch-reducer pattern and generate a list of actions that would mutate one array as the user clicked through the steps. With this initial implementation, I generated a stack of dispatch actions that could mutate the array, update the pointers, and change the display text. This worked pretty well going forward as the user clicked "Next", but not in reverse as the user clicked "Previous". Ultimately, I abandoned this approach in favor of the more React-way of doing things. My final implementation is pretty straightforward. When the algorithm runs, it generates a stack of UI states.
+  p Here is what the main method looks like:
+  pre.prettyprint.linenums.
+        qSort = (arr, start, end) => {
+          this.states.push({
+            arr: [...arr],
+            start,
+            end,
+            message: this.qSortMessage(start, end),
+            i: null,
+            j: null,
+            pivotIndex: null
+          });
+          if (start >= end) {
+            this.states.push({
+              ...this.lastState(),
+              message: 'Return because the elements are sorted (this is the base case).'
+            });
+            return;
+          }
+          const pivotPosition = this.partition(arr, start, end);
+          this.qSort(arr, start, pivotPosition - 1);
+          this.qSort(arr, pivotPosition + 1, end);
+        };
+                
+  p Notice that the array of numbers is copied rather than mutated in place by way of the spread operator (see line 3 above). This happens each time a new state is added to the stack. In the end, I reminded myself that I was building a user interfacer rather than a low level data processing algorithm.
   a(href=`/demos/run/${page.path}`) View Demo
   br
   br
