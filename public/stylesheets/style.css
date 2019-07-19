@@ -65,3 +65,8 @@ nav a.active {
   height: 100%;
   border: none;
 }
+
+img.me {
+  width: 600px;
+  max-width: 100%;
+}
