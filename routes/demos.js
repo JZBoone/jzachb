@@ -3,13 +3,13 @@ module.exports = [
     path: "jzachb",
     title: "jzachb",
     description:
-      "this site is a Node.js Express application that runs on Google Cloud Platform"
+      "The site you are viewing is a Node.js app that runs on Google Cloud Platform."
   },
   {
     path: "quick-sort",
     title: "Quick Sort",
     description:
-      "a React application that helps you visualize and understand the quick sort algorithm",
+      "This demo is built in React and helps you (and me) visualize and understand the quick sort algorithm.",
     demoUrl: "https://storage.googleapis.com/jzachb-demos/quick-sort/index.html"
   }
 ];
