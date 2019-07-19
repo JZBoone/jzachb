@@ -35,10 +35,8 @@ nav a.active {
 
 #wrapper,
 #demo {
-  position: relative;
-  top: 51px;
+  margin-top: 55px;
   height: 100%;
-  max-height: calc(100vh - 66px);
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
@@ -47,8 +45,7 @@ nav a.active {
   #wrapper,
   #demo {
     bottom: 51px;
-    top: unset;
-    padding-top: 15px;
+    margin-top: 15px;
   }
   #nav-wrapper {
     bottom: 0px;
@@ -58,7 +55,7 @@ nav a.active {
 #content {
   max-width: 960px;
   margin: 0 auto;
-  padding: 20px 10px 150px 10px;
+  padding: 0px 10px 150px 10px;
 }
 
 #demo iframe {
