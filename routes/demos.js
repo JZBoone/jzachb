@@ -9,7 +9,7 @@ module.exports = [
     path: "quick-sort",
     title: "Quick Sort",
     description:
-      "This demo is built in React and helps you (and me) visualize and understand the quick sort algorithm.",
+      "This demo is built in React and helps you visualize and understand the quick sort algorithm.",
     demoUrl:
       "https://storage.googleapis.com/jzachb-demos/quick-sort/index.html",
     hasCodeSnippet: true
