@@ -60,6 +60,11 @@ nav a.active {
   padding: 0px 10px 150px 10px;
 }
 
+#demo {
+  height: calc(100vh - 60px);
+  padding-top: 50px;
+}
+
 #demo iframe {
   width: 100%;
   height: 100%;
@@ -91,4 +96,12 @@ li.L6,
 li.L7,
 li.L8 {
   list-style-type: decimal !important;
+}
+
+pre.prettyprint {
+  overflow: scroll;
+}
+
+pre.prettyprint li {
+  white-space: pre;
 }
