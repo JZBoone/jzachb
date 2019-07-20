@@ -101,6 +101,7 @@ li.L8 {
 pre.prettyprint {
   overflow: scroll;
   width: unset !important;
+  -webkit-overflow-scrolling: touch;
 }
 
 pre.prettyprint li {
