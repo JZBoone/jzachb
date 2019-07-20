@@ -3,6 +3,8 @@ extends layout
 block content
   h1= page.title
   p= page.description
+  a(href='https://github.com/JZBoone/jzachb', target='_blank') View Source Code
+  br
   h2 Technologies
   p Node.js, Express, Jade, App Engine, Cloud Storage
   h2 Inspiration
@@ -34,5 +36,3 @@ block content
   code.command gsutil -m -h "Cache-Control:no-cache" rsync -r ./build  gs://jzachb-demos/quick-sort/
   p Then in my node app I loaded the demo app inside an iframe. After a few CSS tweaks, I had an MVP (minimum viable product) that hit all of my requirements.
   p A quick note on the visual design (or lack thereof) of this site. I am not a visual designer. I wanted everything in this site to be an expression of me and my work, the meat and potatoes of which are the content and the code. If you inspect the code, you'll notice that it is extremely simple. In fact, my whole approach to problem solving is to find the simplest possible solution that meets all of the requirements. It is worth mentioning, however, that the code is written in such a way that with the help of a designer it would take very little effort to transform the look and feel.
-  br
-  a(href='https://github.com/JZBoone/jzachb', target='_blank') View Source Code

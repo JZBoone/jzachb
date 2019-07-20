@@ -3,6 +3,10 @@ extends layout
 block content
   h1= page.title
   p= page.description
+  a(href=`/demos/run/${page.path}`) View Demo
+  br
+  a(href='https://github.com/JZBoone/quick-sort', target='_blank') View Source Code
+  br
   h2 Technologies
   p React
   h2 Inspiration
@@ -37,7 +41,3 @@ block content
         };
                 
   p Notice that the array of numbers is copied rather than mutated in place by way of the spread operator (see line 3 above). This happens each time a new state is added to the stack. In the end, I reminded myself that I was building a user interfacer rather than a low level data processing algorithm.
-  a(href=`/demos/run/${page.path}`) View Demo
-  br
-  br
-  a(href='https://github.com/JZBoone/quick-sort', target='_blank') View Source Code
