@@ -19,7 +19,7 @@ const letters = {
     "XX    XX",
     "XX    XX",
     "XXXXXXXX",
-    "       "
+    "        "
   ],
   c: [
     "        ",
@@ -30,7 +30,7 @@ const letters = {
     "XX      ",
     "XX      ",
     "XXXXXXXX",
-    "       "
+    "        "
   ],
   d: [
     "      XX",
@@ -41,7 +41,7 @@ const letters = {
     "XX    XX",
     "XX    XX",
     "XXXXXXXX",
-    "       "
+    "        "
   ],
   e: [
     "        ",
@@ -52,6 +52,149 @@ const letters = {
     "XXXXXXXX",
     "XX      ",
     "XXXXXXXX",
+    "        "
+  ],
+  f: [
+    "  XXXX ",
+    "XX   XX",
+    "XX     ",
+    "XX     ",
+    "XXXXXXX",
+    "XX     ",
+    "XX     ",
+    "XX     ",
+    "       "
+  ],
+  g: [
+    "       ",
+    "       ",
+    "XXXXXXX",
+    "XX   XX",
+    "XX   XX",
+    "XXXXXXX",
+    "     XX",
+    "     XX",
+    "XXXXXXX"
+  ],
+  h: [
+    "XX     ",
+    "XX     ",
+    "XX     ",
+    "XXXXXXX",
+    "XX   XX",
+    "XX   XX",
+    "XX   XX",
+    "XX   XX",
+    "       "
+  ],
+  i: [
+    "       ",
+    "       ",
+    "  XX   ",
+    "       ",
+    "  XX   ",
+    "  XX   ",
+    "  XX   ",
+    "  XX   ",
+    "       "
+  ],
+  j: [
+    "       ",
+    "       ",
+    "     XX",
+    "     XX",
+    "     XX",
+    "     XX",
+    "     XX",
+    "     XX",
+    "XXXXXXX"
+  ],
+  k: [
+    "XX     ",
+    "XX   XX",
+    "XX  XX ",
+    "XXXXX  ",
+    "XX  XX ",
+    "XX   XX",
+    "XX   XX",
+    "XX   XX",
+    "       "
+  ],
+  l: [
+    "XX     ",
+    "XX     ",
+    "XX     ",
+    "XX     ",
+    "XX     ",
+    "XX     ",
+    "XX     ",
+    "XX     ",
+    "       "
+  ],
+  m: [
+    "       ",
+    "       ",
+    "X      ",
+    "XXXXXXX",
+    "X  X  X",
+    "X  X  X",
+    "X  X  X",
+    "X     X",
+    "       "
+  ],
+  n: [
+    "       ",
+    "       ",
+    "X      ",
+    "XXXXXXX",
+    "XX   XX",
+    "XX   XX",
+    "XX   XX",
+    "XX   XX",
+    "       "
+  ],
+  o: [
+    "       ",
+    "       ",
+    "       ",
+    "XXXXXXX",
+    "X     X",
+    "X     X",
+    "X     X",
+    "XXXXXXX",
+    "       "
+  ],
+  p: [
+    "       ",
+    "XXXXXXX",
+    "XX   XX",
+    "XX   XX",
+    "XX   XX",
+    "XXXXXXX",
+    "XX     ",
+    "XX     ",
+    "XX     "
+  ],
+  q: [
+    "       ",
+    "XXXXXXX",
+    "XX   XX",
+    "XX   XX",
+    "XX   XX",
+    "XXXXXXX",
+    "     XX",
+    "     XX",
+    "     XX"
+  ],
+  r: [
+    "       ",
+    "       ",
+    "X      ",
+    "XXXXXXX",
+    "XX     ",
+    "XX     ",
+    "XX     ",
+    "XX     ",
     "       "
   ]
 };
