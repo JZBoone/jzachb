@@ -1,0 +1,6 @@
+dispatch:
+  - url: "jzachb.com/*"
+    service: default
+
+  - url: "blog.jzachb.com/*"
+    service: word-press

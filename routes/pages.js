@@ -15,8 +15,7 @@ module.exports = [
     title: "Demos"
   },
   {
-    path: "/blog",
-    template: "blog",
+    path: "https://blog.jzachb.com/",
     title: "Blog"
   }
 ];
