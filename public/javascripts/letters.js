@@ -55,7 +55,7 @@ const letters = {
     "        "
   ],
   f: [
-    "  XXXX ",
+    " XXXXX ",
     "XX   XX",
     "XX     ",
     "XX     ",
@@ -90,12 +90,12 @@ const letters = {
   i: [
     "       ",
     "       ",
-    "  XX   ",
+    "  XXX  ",
     "       ",
-    "  XX   ",
-    "  XX   ",
-    "  XX   ",
-    "  XX   ",
+    "  XXX  ",
+    "  XXX  ",
+    "  XXX  ",
+    "  XXX  ",
     "       "
   ],
   j: [
@@ -195,6 +195,94 @@ const letters = {
     "XX     ",
     "XX     ",
     "XX     ",
+    "       "
+  ],
+  s: [
+    "       ",
+    "       ",
+    "       ",
+    "XXXXXXX",
+    "XX     ",
+    "XXXXXXX",
+    "     XX",
+    "XXXXXXX",
+    "       "
+  ],
+  t: [
+    "       ",
+    "  XXX   ",
+    "  XXX  ",
+    "XXXXXXX",
+    "  XXX  ",
+    "  XXX  ",
+    "  XXX  ",
+    "  XXX  ",
+    "       "
+  ],
+  u: [
+    "       ",
+    "       ",
+    "       ",
+    "XX   XX",
+    "XX   XX",
+    "XX   XX",
+    "XX   XX",
+    "XXXXXXX",
+    "       "
+  ],
+  v: [
+    "       ",
+    "       ",
+    "       ",
+    "XX   XX",
+    "XX   XX",
+    "XX   XX",
+    " XX XX ",
+    "   X   ",
+    "       "
+  ],
+  w: [
+    "       ",
+    "       ",
+    "       ",
+    "X     X",
+    "X  X  X",
+    "X  X  X",
+    "X XXX X",
+    " X   X ",
+    "       "
+  ],
+  x: [
+    "       ",
+    "       ",
+    "       ",
+    "XX   XX",
+    " XX XX ",
+    "  XXX  ",
+    " XX XX ",
+    "XX   XX",
+    "       "
+  ],
+  y: [
+    "       ",
+    "       ",
+    "       ",
+    "       ",
+    "XX   XX",
+    " XX XX ",
+    "  XXX  ",
+    " XX    ",
+    "XX     "
+  ],
+  z: [
+    "       ",
+    "       ",
+    "       ",
+    "XXXXXXX",
+    "    XX ",
+    "   XX  ",
+    "  XX   ",
+    "XXXXXXX",
     "       "
   ]
 };
