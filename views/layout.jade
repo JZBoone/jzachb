@@ -8,6 +8,8 @@ html
     link(href='https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap', rel='stylesheet')
     if page.hasCodeSnippet
       script(src='https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=js&skin=sunburst')
+    script(src='/javascripts/index.js')
+    script(type="text/javascript") consolePrettyPrint("#{page.title}")
   body
     include nav.jade
     if isDemo
