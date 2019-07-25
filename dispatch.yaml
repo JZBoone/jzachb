@@ -3,4 +3,4 @@ dispatch:
     service: default
 
   - url: "blog.jzachb.com/*"
-    service: word-press
+    service: wpstandard
