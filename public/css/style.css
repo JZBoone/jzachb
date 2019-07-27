@@ -1,3 +1,7 @@
+:root {
+  --primary: #00b7ff;
+}
+
 /* hind-siliguri-regular - latin */
 @font-face {
   font-family: "Hind Siliguri";
@@ -18,7 +22,7 @@ html {
 }
 
 #nav-wrapper {
-  background-color: #00b7ff;
+  background-color: var(--primary);
   width: 100%;
   position: fixed;
   top: 0px;
@@ -48,21 +52,6 @@ nav a.active {
 #wrapper,
 #demo {
   padding-top: 75px;
-}
-
-@media only screen and (max-width: 600px) {
-  #wrapper,
-  #demo {
-    padding-top: 0px;
-  }
-  #nav-wrapper {
-    bottom: 0px;
-    top: unset;
-  }
-  nav a {
-    font-size: 18px;
-    padding: 8px 0px;
-  }
 }
 
 #content {
@@ -117,4 +106,19 @@ pre.prettyprint {
 
 pre.prettyprint li {
   white-space: pre;
+}
+
+@media only screen and (max-width: 600px) {
+  #wrapper,
+  #demo {
+    padding-top: 0px;
+  }
+  #nav-wrapper {
+    bottom: 0px;
+    top: unset;
+  }
+  nav a {
+    font-size: 18px;
+    padding: 8px 0px;
+  }
 }

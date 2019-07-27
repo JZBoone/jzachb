@@ -5,7 +5,7 @@ const getTitle = () => {
 };
 
 const print = output => {
-  let styles = "font-size:16px; font-family:monospace; color:#00b7ff";
+  let styles = "font-size: 16px; font-family: monospace; color: #00b7ff";
   console.log(output, styles);
 };
 
