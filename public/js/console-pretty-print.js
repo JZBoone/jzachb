@@ -12,11 +12,13 @@ const print = output => {
 const generateMessageString = messageString => {
   let lines = [];
   for (const c of messageString) {
-    for (let i = 0; i < 9; i++) {
+    let i = 0;
+    while (letters[c][i]) {
       if (lines[i] === undefined) {
         lines[i] = "";
       }
       lines[i] += letters[c][i] + " ";
+      i++;
     }
   }
   let result = "%c";
