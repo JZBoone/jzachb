@@ -21,6 +21,19 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+if (isDev) {
+  const webpackMiddleware = require("webpack-dev-middleware");
+  const webpack = require("webpack");
+  const webpackConfig = require("./webpack.config");
+  webpackConfig.mode = "development";
+  app.use(
+    webpackMiddleware(webpack(webpackConfig), {
+      publicPath: "/js"
+    })
+  );
+}
+
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/demos/*", demoRouter);

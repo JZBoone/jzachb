@@ -298,21 +298,4 @@ const letters = {
   ]
 };
 
-const consolePrettyPrint = messageRaw => {
-  const message = messageRaw.toLowerCase();
-  let lines = [];
-  for (const c of message) {
-    for (let i = 0; i < 9; i++) {
-      if (lines[i] === undefined) {
-        lines[i] = "";
-      }
-      lines[i] += letters[c][i] + " ";
-    }
-  }
-  let styles = "font-size:16px; font-family:monospace; color:#00b7ff";
-  let result = "%c";
-  lines.forEach(line => {
-    result += `${line} \n`;
-  });
-  console.log(result, styles);
-};
+module.exports = letters;
