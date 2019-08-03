@@ -1,5 +1,15 @@
 import "../css/modal.css";
 
+const createElementNS = (type, attrs = {}) => {
+  const el = document.createElementNS("http://www.w3.org/2000/svg", type);
+  Object.entries(attrs).forEach(attr => {
+    const key = attr[0];
+    const val = attr[1];
+    el.setAttribute(key, val);
+  });
+  return el;
+};
+
 const createElement = (type, attrs = {}) => {
   const el = document.createElement(type);
   Object.entries(attrs).forEach(attr => {
@@ -22,10 +32,17 @@ const render = ({ el, parent = document.body, children = [] }) => {
   });
 };
 
-const TextArea = () => {
-  return createElement("textarea", {
-    id: "send-message",
-    autofocus: true
+const onClose = () => {
+  document.body.style.overflow = "";
+  const modal = modalEl();
+  modal.remove();
+};
+
+const Modal = () => {
+  return createElement("div", {
+    id: "modal",
+    className: "modal",
+    onclick: onClose
   });
 };
 
@@ -33,34 +50,71 @@ const modalEl = () => {
   return document.getElementById("modal");
 };
 
-const focusInput = () => {
-  const input = document.getElementById("send-message");
-  input.focus();
+const ModalContent = () => {
+  return createElement("div", {
+    className: "modal-content",
+    onclick: e => {
+      e.stopPropagation();
+    }
+  });
 };
 
 const CloseIcon = () => {
-  const closeIcon = createElement("div", {
-    className: "close-icon",
-    onclick: () => {
-      document.body.style.overflow = "";
-      const modal = modalEl();
-      modal.remove();
+  const button = createElement("button", {
+    "aria-label": "Close Send Message Popup",
+    className: "close button",
+    onclick: onClose
+  });
+  const svg = createElementNS("svg", {
+    role: "img",
+    viewBox: "0 0 24 24"
+  });
+  const path = createElementNS("path", {
+    d:
+      "M18 7.41L16.59 6 12 10.59 7.41 6 6 7.41 10.59 12 6 16.59 7.41 18 12 13.41 16.59 18 18 16.59 13.41 12"
+  });
+  svg.appendChild(path);
+  button.appendChild(svg);
+  return button;
+};
+
+const TextArea = () => {
+  return createElement("textarea", {
+    id: "textarea",
+    autofocus: true
+  });
+};
+
+const inputEl = () => {
+  return document.getElementById("textarea");
+};
+
+const Button = () => {
+  return createElement("button", {
+    id: "send",
+    className: "button primary",
+    innerHTML: "Send Message"
+  });
+};
+
+const focusInput = () => {
+  const input = inputEl();
+  input.focus();
+};
+
+const startTyping = () => {
+  const input = inputEl();
+  const message = "Hi Zach, ";
+  let i = 0;
+  const type = () => {
+    if (i === message.length) {
+      return;
     }
-  });
-  return closeIcon;
-};
-
-const ModalContent = () => {
-  return createElement("div", {
-    className: "modal-content"
-  });
-};
-
-const Modal = () => {
-  return createElement("div", {
-    id: "modal",
-    className: "modal"
-  });
+    input.value += message.charAt(i);
+    i++;
+    setInterval(type, 150);
+  };
+  setTimeout(type, 100);
 };
 
 export const contactModule = e => {
@@ -71,13 +125,14 @@ export const contactModule = e => {
     children: [
       {
         el: ModalContent,
-        children: [{ el: CloseIcon }, { el: TextArea }]
+        children: [{ el: CloseIcon }, { el: TextArea }, { el: Button }]
       }
     ]
   });
   const modal = modalEl();
   // // force opacity style to get applied before transition
   window.getComputedStyle(modal).opacity;
-  modal.style.opacity = ".9";
+  modal.style.opacity = "1";
   focusInput();
+  startTyping();
 };
