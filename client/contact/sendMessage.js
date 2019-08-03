@@ -1,4 +1,6 @@
-export const post = (url = "", data = {}) => {
+import { buttonEl, onClose } from "./elements";
+
+const post = (url = "", data = {}) => {
   // Default options are marked with *
   return fetch(url, {
     method: "POST", // *GET, POST, PUT, DELETE, etc.
@@ -14,3 +16,23 @@ export const post = (url = "", data = {}) => {
     body: JSON.stringify(data) // body data type must match "Content-Type" header
   }).then(response => response.json()); // parses JSON response into native JavaScript objects
 };
+
+const sendMessage = message => {
+  const button = buttonEl();
+  button.disabled = true;
+  button.innerHTML = "Sending Message...";
+  post("/send-message", { message })
+    .then(resp => {
+      if (resp.success) {
+        onClose();
+      } else {
+        throw new Error("Did not get success response from Node");
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      buttonEl().disabled = false;
+    });
+};
+
+export default sendMessage;
