@@ -93,11 +93,16 @@ const doSend = message => {
   console.log(message);
 };
 
+const buttonEl = () => {
+  return document.getElementById("send");
+};
+
 const Button = () => {
   return createElement("button", {
     id: "send",
     className: "button primary",
     innerHTML: "Send Message",
+    disabled: true,
     onclick: () => {
       const message = inputEl().value;
       doSend(message);
@@ -116,13 +121,14 @@ const startTyping = () => {
   let i = 0;
   const type = () => {
     if (i === message.length) {
+      buttonEl().disabled = false;
       return;
     }
     input.value += message.charAt(i);
     i++;
-    setInterval(type, 150);
+    setTimeout(type, 100);
   };
-  setTimeout(type, 100);
+  setTimeout(type, 50);
 };
 
 export const contactModule = e => {
