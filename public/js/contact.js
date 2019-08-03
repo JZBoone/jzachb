@@ -89,11 +89,19 @@ const inputEl = () => {
   return document.getElementById("textarea");
 };
 
+const doSend = message => {
+  console.log(message);
+};
+
 const Button = () => {
   return createElement("button", {
     id: "send",
     className: "button primary",
-    innerHTML: "Send Message"
+    innerHTML: "Send Message",
+    onclick: () => {
+      const message = inputEl().value;
+      doSend(message);
+    }
   });
 };
 
