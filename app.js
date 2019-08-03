@@ -2,11 +2,13 @@ const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
 const logger = require("morgan");
 const pages = require("./routes/pages");
 
 const demoRouter = require("./routes/demoRouter");
 const pageRouter = require("./routes/pageRouter");
+const sendMessageRouter = require("./routes/sendMessageRouter");
 
 const app = express();
 
@@ -17,6 +19,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 app.set("view cache", !isDev);
 
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -36,6 +39,7 @@ if (isDev) {
 
 app.use(express.static(path.join(__dirname, "public")));
 
+app.post("/send-message", sendMessageRouter);
 app.get("/demos/*", demoRouter);
 app.all("*", pageRouter);
 

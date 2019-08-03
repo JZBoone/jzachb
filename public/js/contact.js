@@ -1,4 +1,5 @@
 import "../css/modal.css";
+import { post } from "./fetch";
 
 const createElementNS = (type, attrs = {}) => {
   const el = document.createElementNS("http://www.w3.org/2000/svg", type);
@@ -90,7 +91,19 @@ const inputEl = () => {
 };
 
 const doSend = message => {
-  console.log(message);
+  buttonEl().disabled = true;
+  post("/send-message", { message })
+    .then(resp => {
+      if (resp.success) {
+        onClose();
+      } else {
+        throw new Error("Did not get success response from Node");
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      buttonEl().disabled = false;
+    });
 };
 
 const buttonEl = () => {
