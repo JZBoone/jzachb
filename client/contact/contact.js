@@ -45,7 +45,7 @@ export const contactModule = e => {
     ]
   });
   const modal = modalEl();
-  // // force opacity style to get applied before transition
+  // force opacity style to get applied before transition
   window.getComputedStyle(modal).opacity;
   modal.style.opacity = "1";
   focusInput();
