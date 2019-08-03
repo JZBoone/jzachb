@@ -1,4 +1,4 @@
-import "../css/modal.css";
+import "./contact.css";
 import { post } from "./fetch";
 
 const createElementNS = (type, attrs = {}) => {

@@ -32,12 +32,12 @@ if (isDev) {
   webpackConfig.mode = "development";
   app.use(
     webpackMiddleware(webpack(webpackConfig), {
-      publicPath: "/js"
+      publicPath: "/"
     })
   );
 }
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "client")));
 
 app.post("/send-message", sendMessageRouter);
 app.get("/demos/*", demoRouter);
