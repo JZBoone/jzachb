@@ -1,6 +1,4 @@
-import "../css/style.css";
+import "../css/main.css";
 import "./console-pretty-print";
-
-export const contact = () => {
-  console.log("run from library");
-};
+import { contactModule } from "./contact.js";
+export const contact = contactModule;

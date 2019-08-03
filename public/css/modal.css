@@ -1,0 +1,46 @@
+#modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+  top: 0px;
+  opacity: 0.5;
+  transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -webkit-transition: opacity 0.1s ease-in-out;
+}
+
+.modal-content {
+  height: 100%;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0px 10px 150px 10px;
+}
+
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: purple;
+}
+
+#send-message {
+  width: 100%;
+  height: calc(100vh - 100px);
+  position: relative;
+  top: 40px;
+  font-size: 40px;
+  resize: none;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  display: block;
+  background: none;
+  outline: none !important;
+  box-sizing: content-box;
+  -webkit-tap-highlight-color: transparent;
+}

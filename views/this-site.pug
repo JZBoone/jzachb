@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  h1= page.title
+  p= page.description
+  a(href='https://github.com/JZBoone/jzachb', target='_blank') View Source Code
+  br
+  h2 Technologies
+  p App Engine, Cloud Storage, Node.js, Express, Pug
+  h2 Inspiration
+  p I am obsessed with seeing my code work in production. After I made the quick sort visualizer, I wanted to publish it somewhere.
+  h2 Discussion
+  p In determining the architecture and technologies to build this site, my requirements were to: 
+  ol
+    li Serve static pages
+    li Publish demo appplications whose source code would live in separate GitHub repositories
+    li Maintain a blog
+  p I decided to host everything on Google Cloud App Engine for a few reasons. The first thing that really appealed to me was that App Engine scales up or down automatically based on its load. So if your site goes viral, App Engine automatically spins up new instances to handle the spike. Or if you abandon your project, App Engine can scale to zero and you don't even get billed. Also, App Engine manages SSL automatically and is incredibly easy to get up and running. I created a boilerplate Node.js app with the 
+    a(href='https://www.npmjs.com/package/express-generator' target='_blank') express-generator
+    | &nbsp;tool and deployed it in a few short minutes following the 
+    a(href='https://cloud.google.com/nodejs/getting-started/hello-world' target='_blank') Node.js quick start tutorial
+    | .
+  p
+    strong Google Cloud App Engine Architecture:
+  p The configuration on App Engine is straightforward (
+    a(href='https://cloud.google.com/appengine/docs/standard/nodejs/configuration-files' target='_blank') view documentation
+    | ).
+  img(
+    src='https://storage.googleapis.com/jzachb-static/app-engine-architecture.png',
+    alt='Architecture Diagram',
+    style='width: 800px; max-width: 100%;'
+  )
+  p
+    strong dispatch.yaml
+  pre.prettyprint.linenums.
+    dispatch:
+    - url: "jzachb.com/*"
+      service: default
+
+    - url: "blog.jzachb.com/*"
+      service: wordpress
+
+  p A quick note on the visual design (or lack thereof) of this site. I am not a visual designer. I wanted everything in this site to be an expression of me and my work, the meat and potatoes of which are the content and the code.

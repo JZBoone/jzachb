@@ -1,0 +1,8 @@
+#nav-wrapper
+  nav
+    for p in pages
+      a(
+        href = p.path,
+        class = p.path === page.path ? 'active' : ''
+      ) #{p.title}
+    a(href='#' onclick='jzb.contact(event)') Contact
