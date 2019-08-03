@@ -91,7 +91,9 @@ const inputEl = () => {
 };
 
 const doSend = message => {
-  buttonEl().disabled = true;
+  const button = buttonEl();
+  button.disabled = true;
+  button.innerHTML = "Sending Message...";
   post("/send-message", { message })
     .then(resp => {
       if (resp.success) {
