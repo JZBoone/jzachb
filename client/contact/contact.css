@@ -32,11 +32,16 @@
   height: 48px;
 }
 
+.contact-label {
+  position: relative;
+  top: 25px;
+}
+
 #textarea {
   width: 100%;
-  height: calc(100vh - 130px);
+  height: calc(100vh - 120px);
   position: relative;
-  top: 78px;
+  top: 40px;
   font-size: 28px;
   resize: none;
   padding: 0;

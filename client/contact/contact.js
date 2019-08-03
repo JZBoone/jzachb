@@ -5,6 +5,7 @@ import {
   modalEl,
   ModalContent,
   CloseIcon,
+  Label,
   TextArea,
   inputEl,
   buttonEl,
@@ -40,7 +41,12 @@ export const contactModule = e => {
     children: [
       {
         el: ModalContent,
-        children: [{ el: CloseIcon }, { el: TextArea }, { el: Button }]
+        children: [
+          { el: CloseIcon },
+          { el: Label },
+          { el: TextArea },
+          { el: Button }
+        ]
       }
     ]
   });

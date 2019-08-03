@@ -1,17 +1,14 @@
 import { createElement, createElementNS } from "./render-utils";
 import sendMessage from "./sendMessage";
 
-export const Modal = () => {
-  return createElement("div", {
+export const Modal = () =>
+  createElement("div", {
     id: "modal",
     className: "modal",
     onclick: onClose
   });
-};
 
-export const modalEl = () => {
-  return document.getElementById("modal");
-};
+export const modalEl = () => document.getElementById("modal");
 
 export const onClose = () => {
   document.body.style.overflow = "";
@@ -19,14 +16,13 @@ export const onClose = () => {
   modal.remove();
 };
 
-export const ModalContent = () => {
-  return createElement("div", {
+export const ModalContent = () =>
+  createElement("div", {
     className: "modal-content",
     onclick: e => {
       e.stopPropagation();
     }
   });
-};
 
 export const CloseIcon = () => {
   const button = createElement("button", {
@@ -47,23 +43,25 @@ export const CloseIcon = () => {
   return button;
 };
 
-export const TextArea = () => {
-  return createElement("textarea", {
+export const Label = () =>
+  createElement("label", {
+    htmlFor: "textarea",
+    className: "contact-label",
+    innerHTML: "Leave a Message"
+  });
+
+export const TextArea = () =>
+  createElement("textarea", {
     id: "textarea",
     autofocus: true
   });
-};
 
-export const inputEl = () => {
-  return document.getElementById("textarea");
-};
+export const inputEl = () => document.getElementById("textarea");
 
-export const buttonEl = () => {
-  return document.getElementById("send");
-};
+export const buttonEl = () => document.getElementById("send");
 
-export const Button = () => {
-  return createElement("button", {
+export const Button = () =>
+  createElement("button", {
     id: "send",
     className: "button primary",
     innerHTML: "Send Message",
@@ -73,4 +71,3 @@ export const Button = () => {
       sendMessage(message);
     }
   });
-};
