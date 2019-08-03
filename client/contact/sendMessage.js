@@ -33,6 +33,7 @@ const sendMessage = message => {
       console.error(error);
       alert("Shoot! There was a problem sending the message.");
       buttonEl().disabled = false;
+      button.innerHTML = "Send Message";
     });
 };
 
