@@ -31,6 +31,7 @@ const sendMessage = message => {
     })
     .catch(error => {
       console.error(error);
+      alert("Shoot! There was a problem sending the message.");
       buttonEl().disabled = false;
     });
 };
