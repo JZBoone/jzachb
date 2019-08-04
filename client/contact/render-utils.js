@@ -1,8 +1,7 @@
 export const createElement = (type, attrs = {}) => {
   const el = document.createElement(type);
   Object.entries(attrs).forEach(attr => {
-    const key = attr[0];
-    const val = attr[1];
+    const [key, val] = attr;
     el[key] = val;
   });
   return el;
@@ -11,8 +10,7 @@ export const createElement = (type, attrs = {}) => {
 export const createElementNS = (type, attrs = {}) => {
   const el = document.createElementNS("http://www.w3.org/2000/svg", type);
   Object.entries(attrs).forEach(attr => {
-    const key = attr[0];
-    const val = attr[1];
+    const [key, val] = attr;
     el.setAttribute(key, val);
   });
   return el;
