@@ -1,4 +1,5 @@
 import letters from "./letters";
+import { consoleImgPrint } from "../console-img-print/console-img-print";
 
 const getTitle = () => {
   return document.title.replace("jzachb - ", "").toLowerCase();
@@ -31,4 +32,14 @@ const generateMessageString = messageString => {
 const title = getTitle();
 const messageString = generateMessageString(title);
 
-window.onload = print(messageString);
+const run = () => {
+  if (title === "home") {
+    consoleImgPrint();
+  } else {
+    print(messageString);
+  }
+};
+
+window.onload = setTimeout(() => {
+  run();
+});
