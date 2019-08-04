@@ -1,6 +1,12 @@
 doctype html
 html
   head
+    script(async src='https://www.googletagmanager.com/gtag/js?id=UA-44050778-2')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-44050778-2');
     title=`jzachb -  ${page.title}`
     meta(name='viewport', content='width=device-width, initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
     script(src='/bundle.js')
