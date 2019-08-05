@@ -13,7 +13,7 @@ const getStringAndStyles = ({ data, width, height }) => {
       const a = data[i + 3];
       styles.push(
         `color: rgba(${r},${g},${b},${a /
-          255}); font-size: 10px; font-family: monospace; line-height: 10px;`
+          255}); font-size: 10px; font-family: monospace;`
       );
       result += "%c◼";
     }
