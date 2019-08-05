@@ -1,5 +1,5 @@
 import letters from "./letters";
-import { consoleImgPrint } from "../console-img-print/console-img-print";
+import { consoleImgPrint } from "./console-img-print";
 
 const getTitle = () => {
   return document.title.replace("jzachb - ", "").toLowerCase();
