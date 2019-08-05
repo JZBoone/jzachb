@@ -24,8 +24,8 @@ const getStringAndStyles = ({ data, width, height }) => {
 
 const getImageData = () => {
   return new Promise(resolve => {
-    const img = document.createElement("img");
-    img.onload = function() {
+    const img = new Image();
+    img.onload = () => {
       const canvas = document.createElement("canvas");
       const { width, height } = img;
       canvas.width = width;
