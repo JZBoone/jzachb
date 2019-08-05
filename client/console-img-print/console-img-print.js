@@ -3,13 +3,14 @@ import imgSrc from "./me.png";
 const getStringAndStyles = ({ data, width, height }) => {
   let result = "";
   const styles = [];
-  for (let i = 0; i < height; i++) {
-    for (let j = 0; j < width; j++) {
-      const k = i * width * 4 + j * 4;
-      const r = data[k];
-      const g = data[k + 1];
-      const b = data[k + 2];
-      const a = data[k + 3];
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const oneLine = width * 4;
+      const i = y * oneLine + x * 4;
+      const r = data[i];
+      const g = data[i + 1];
+      const b = data[i + 2];
+      const a = data[i + 3];
       styles.push(
         `color: rgba(${r},${g},${b},${a /
           255}); font-size: 10px; font-family: monospace; line-height: 10px;`
