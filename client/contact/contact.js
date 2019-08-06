@@ -60,5 +60,5 @@ export const contactModule = e => {
   if (typeof console.clear !== "undefined") {
     console.clear();
   }
-  consoleLetterPrint("contact");
+  consoleLetterPrint("Contact");
 };
