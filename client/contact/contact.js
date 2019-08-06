@@ -57,5 +57,8 @@ export const contactModule = e => {
   modal.style.opacity = "1";
   focusInput();
   startTyping();
+  if (typeof console.clear !== "undefined") {
+    console.clear();
+  }
   consoleLetterPrint("contact");
 };
