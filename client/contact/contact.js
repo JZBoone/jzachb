@@ -11,6 +11,7 @@ import {
   buttonEl,
   Button
 } from "./elements";
+import { consoleLetterPrint } from "../console-print/console-letter-print";
 
 const focusInput = () => {
   const input = inputEl();
@@ -56,4 +57,5 @@ export const contactModule = e => {
   modal.style.opacity = "1";
   focusInput();
   startTyping();
+  consoleLetterPrint("contact");
 };
