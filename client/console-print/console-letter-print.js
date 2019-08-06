@@ -8,7 +8,7 @@ const getString = ({ data, width, height }) => {
       const g = data[i + 1];
       const b = data[i + 2];
       const a = data[i + 3];
-      const rgba = `${r},${g},${b},${a / 255}`;
+      const rgba = `${r},${g},${b},${a}`;
       if (rgba !== "0,0,0,0") {
         result += "jzb";
       } else {
