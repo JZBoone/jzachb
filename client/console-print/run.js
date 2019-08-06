@@ -3,7 +3,7 @@ import { consoleLetterPrint } from "./console-letter-print";
 
 window.onload = setTimeout(() => {
   const title = document.title.replace("jzachb - ", "");
-  if (title === "home") {
+  if (title === "Home") {
     consoleImgPrint();
   } else {
     consoleLetterPrint(title);
