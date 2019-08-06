@@ -32,7 +32,7 @@ const getImageData = ({ message, height, width }) => {
 };
 
 export const consoleLetterPrint = message => {
-  const width = 80;
+  const width = 100;
   const height = 22;
   const data = getImageData({ message, height, width });
   const string = getString({ data, width, height });
