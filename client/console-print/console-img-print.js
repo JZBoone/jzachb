@@ -15,7 +15,7 @@ const getStringAndStyles = ({ data, width, height }) => {
         `color: rgba(${r},${g},${b},${a /
           255}); font-size: 10px; font-family: monospace;`
       );
-      result += "%c◼";
+      result += "%c██";
     }
     result += "\n";
   }
