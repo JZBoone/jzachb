@@ -11,7 +11,7 @@ const getStringAndStyles = ({ data, width, height }) => {
       const g = data[i + 1];
       const b = data[i + 2];
       const a = data[i + 3];
-      styles.push(`color: rgba(${r},${g},${b},${a / 255});`);
+      styles.push(`color: rgba(${r},${g},${b},${a / 255}); font-size: 8px;`);
       result += "%c██";
     }
     result += "\n";
