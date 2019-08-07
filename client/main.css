@@ -19,16 +19,15 @@ html {
   padding: 0px;
   font: 20px "Hind Siliguri", Helvetica, Arial, sans-serif;
   height: 100%;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  color: rgb(17, 17, 17);
 }
 
 p {
   line-height: 1.7;
   font-weight: 300;
-  color: rgb(17, 17, 17);
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;
-  margin: 32px 0px;
 }
 
 #nav-wrapper {
