@@ -15,7 +15,7 @@ block content
       | quick sort visualization tool
     | . Very cool!
   h2 Discussion
-  p Quick sort's strength is that it works with just the array that it is given. Initially I tried to stay true to the spirit of the algorithm by using a single array. I knew that I would have to run the entire algorithm upfront in order to show the user the total number of steps. My idea was to use the dispatch-reducer pattern and generate a list of actions that would mutate one array as the user clicked through the steps. With this initial implementation, I generated a stack of dispatch actions that could mutate the array, update the pointers, and change the display text. This worked pretty well going forward as the user clicked "Next", but not in reverse as the user clicked "Previous". Ultimately, I abandoned this approach in favor of the more React-way of doing things. My final implementation is pretty straightforward. When the algorithm runs, it generates a stack of UI states.
+  p Quick sort's strength is that it works with just the array that it is given. Initially I tried to stay true to the spirit of the algorithm by using a single array. I knew that I would have to run the entire algorithm upfront in order to show the user the total number of steps. My idea was to use the dispatch-reducer pattern and generate a list of actions that would mutate one array as the user clicked through the steps. Ultimately, I abandoned this approach in favor of the more React-way of doing things (i.e., immutability). My final implementation is pretty straightforward. When the algorithm runs, it generates a stack of UI states.
   p Here is what the main method looks like:
   pre.prettyprint.linenums.
         qSort = (arr, start, end) => {
@@ -40,4 +40,4 @@ block content
           this.qSort(arr, pivotPosition + 1, end);
         };
                 
-  p Notice that the array of numbers is copied rather than mutated in place by way of the spread operator (see line 3 above). This happens each time a new state is added to the stack. In the end, I reminded myself that I was building a user interfacer rather than a low level data processing algorithm.
+  p Notice that the array is copied on line 3 with the spread operator. The QuickSort class mutates the array internally when performing the swap operations but copies the array when adding to the stack of UI states. The array of states is what is returned by the QuickSort class and is what is consumed by the app.
