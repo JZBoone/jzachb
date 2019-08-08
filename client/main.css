@@ -6,6 +6,7 @@
 @font-face {
   font-family: "Hind Siliguri";
   font-style: normal;
+  font-display: fallback;
   font-weight: 400;
   src: local("Hind Siliguri Regular"), local("HindSiliguri-Regular"),
     url("/fonts/hind-siliguri-v6-latin-regular.woff2") format("woff2"),
@@ -17,7 +18,7 @@ body,
 html {
   margin: 0px;
   padding: 0px;
-  font: 20px "Hind Siliguri", Helvetica, Arial, sans-serif;
+  font: 20px "Hind Siliguri", sans-serif;
   height: 100%;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
