@@ -20,7 +20,7 @@ const focusInput = () => {
 
 const startTyping = () => {
   const input = inputEl();
-  const message = "Hi Zach, ";
+  const message = "Hi Zach, \n";
   let i = 0;
   const type = () => {
     if (i === message.length) {
