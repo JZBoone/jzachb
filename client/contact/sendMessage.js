@@ -24,6 +24,7 @@ const sendMessage = message => {
   post("/send-message", { message })
     .then(resp => {
       if (resp.success) {
+        alert("Thanks for your message!");
         onClose();
       } else {
         throw new Error("Did not get success response from Node");

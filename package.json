@@ -10,6 +10,7 @@
     "deploy": "gcloud app deploy"
   },
   "dependencies": {
+    "@google-cloud/datastore": "^6.3.1",
     "@sendgrid/client": "^6.4.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",

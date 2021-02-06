@@ -1,11 +1,28 @@
 const express = require("express");
+const {Datastore} = require('@google-cloud/datastore');
 const sendMessageRouter = express.Router();
 
-const { SENDGRID_API_KEY } = process.env;
+const datastore = new Datastore();
+
 const { SENDGRID_SENDER } = process.env;
 const Sendgrid = require("@sendgrid/client");
 
-Sendgrid.setApiKey(SENDGRID_API_KEY);
+
+const getSendGridApiKey = async () => {
+  const query = datastore.createQuery('config');
+  const [results] = await datastore.runQuery(query);
+  return results.find((r) => !!r.SENDGRID_API_KEY).SENDGRID_API_KEY;
+};
+
+(async () => {
+  try {
+    const SENDGRID_API_KEY = await getSendGridApiKey();
+    Sendgrid.setApiKey(SENDGRID_API_KEY);
+  } catch (e) {
+    console.log('** FAILED TO RETRIEVE SEND GRID API KEY FROM DATASTORE')
+    console.log(e);
+  }
+})()
 
 const sendMessage = async (req, res, next) => {
   const request = {
@@ -18,7 +35,7 @@ const sendMessage = async (req, res, next) => {
           subject: "jzachb.com Message"
         }
       ],
-      from: { email: SENDGRID_SENDER },
+      from: { email: 'noreply@jzachb.com' },
       content: [
         {
           type: "text/plain",
@@ -36,7 +53,8 @@ const sendMessage = async (req, res, next) => {
   }
 
   res.send({
-    success: true
+    success: true,
+    sendGridApiKey: SENDGRID_SENDER 
   });
 };
 
